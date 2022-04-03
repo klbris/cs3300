@@ -1,4 +1,5 @@
 require "rails_helper"
+# test projects controller 
 
 RSpec.describe ProjectsController, type: :controller do
   context "GET #index" do

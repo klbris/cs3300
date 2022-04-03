@@ -1,4 +1,5 @@
 require 'rails_helper'
+# home page test 
 
 #RSpec.feature "HomePages", type: :feature do
 #  pending "add some scenarios (or delete) #{__FILE__}"
