@@ -30,7 +30,7 @@ RSpec.feature "Projects", type: :feature do
       #visit projects_path
       #click_button "New Project"
 
-      visit new_user_session_path
+      #visit new_user_session_path
       user = FactoryBot.create(:user)
       login_as(user)
       #sign_in user
@@ -56,6 +56,8 @@ RSpec.feature "Projects", type: :feature do
   context "Update project" do
     let(:project) { Project.create(title: "Test title", description: "Test content") }
     before(:each) do
+      user = FactoryBot.create(:user)
+      login_as(user)
       visit edit_project_path(project)
     end
 
@@ -80,6 +82,8 @@ RSpec.feature "Projects", type: :feature do
     let!(:project) { Project.create(title: "Test title", description: "Test content") }
     scenario "remove project" do
       visit projects_path
+      user = FactoryBot.create(:user)
+      login_as(user)
       click_link "Destroy"
       expect(page).to have_content("Project was successfully destroyed")
       expect(Project.count).to eq(0)
