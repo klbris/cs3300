@@ -6,6 +6,7 @@ RSpec.describe User, type: :model do
     User.new(email: "test@test.com", password: "123456")
   }
 
+  # valid user testing 
   it "is valid with an email and password" do
     expect(subject).to be_valid  
   end
@@ -19,5 +20,4 @@ RSpec.describe User, type: :model do
     subject.password = nil
     expect(subject).to_not be_valid  
   end  
-  
 end

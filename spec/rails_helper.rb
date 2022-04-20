@@ -78,4 +78,11 @@ RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
   config.extend ControllerMacros, :type => :controller
 
+  SimpleCov.start :rails do
+    filters.clear # This will remove the :root_filter and :bundler_filter that come via simplecov's defaults
+    add_filter do |src|
+      !(src.filename =~ /^#{SimpleCov.root}/) unless src.filename =~ /my_engine/
+    end
+  end
+  
 end
