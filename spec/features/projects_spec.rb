@@ -5,11 +5,36 @@ require 'rails_helper'
 #  pending "add some scenarios (or delete) #{__FILE__}"
 #end
 
-require 'rails_helper'
+#require 'rails_helper'
 
 RSpec.feature "Projects", type: :feature do
   context "Create new project" do
     before(:each) do
+
+
+      #visit new_user_registration_path
+      #user = FactoryBot.create(:user)
+      #visit new_user_session_path
+      #click_link "Sign up"
+     # within("form") do
+        #fill_in "Email", with: "test@test.com"
+        #fill_in "Password", with: "123456"
+        #fill_in "Password confirmation", with: "123456"
+      #end
+      #click_button "Sign up"
+      #  fill_in "Password confirmation", with: "123456"
+      #end
+      #user = FactoryBot.create(:user)
+      #login_as(user)
+      
+      #visit projects_path
+      #click_button "New Project"
+
+      visit new_user_session_path
+      user = FactoryBot.create(:user)
+      login_as(user)
+      #sign_in user
+
       visit new_project_path
       within("form") do
         fill_in "Title", with: "Test title"
