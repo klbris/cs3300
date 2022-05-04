@@ -1,4 +1,11 @@
+<%= render 'navBar', project: @project %>
+
 <h1>New Project</h1>
+
+ <div class="container">
+    <h1 class="display-3">New Project</h1>
+    <%= link_to 'New Project', new_project_path %>
+  </div>
 
 <%= render 'form', project: @project %>
 

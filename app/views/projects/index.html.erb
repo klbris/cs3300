@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
+<%= render 'navBar', project: @project %>
 
 <head>
     <meta charset="utf-8">
@@ -20,34 +21,10 @@
 
   <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="true" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="navbar-collapse collapse show" id="navbarsExampleDefault" style="">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <% if !user_signed_in? %>
-            <a class="nav-link" href="/users/sign_up">Sign up <span class="sr-only">(current)</span></a>
-            <a class="nav-link" href="/users/sign_in">Log in <span class="sr-only">(current)</span></a>
-          <% else %>
-          Logged in as  <strong><%= current_user.email %></strong>.
-            <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-          <% end %>
-          </li>
-
-        </ul>
-
-      </div>
-    </nav>
+    
 
     <main role="main">
 
-      <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
         <div class="container">
           <h1 class="display-3">Hello :)</h1>
@@ -87,7 +64,7 @@
     </main>
 
     <footer class="container">
-      <p>© kelsey bristol. I fucked ur mom</p>
+      <p>© kelsey bristol hahaha</p>
     </footer>
 
     <!-- Bootstrap core JavaScript
