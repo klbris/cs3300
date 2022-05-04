@@ -1,15 +1,20 @@
 <p id="notice"><%= notice %></p>
 <%= render 'navBar', project: @project %>
+<br><br><br>
+<br><br><br>
 
+<div class ="text-center">
+
+<div class="container">
 <p>
-  <strong>Title:</strong>
-  <%= @project.title %>
+  <h2><%= @project.title %></h2>
 </p>
 
 <p>
-  <strong>Description:</strong>
   <%= @project.description %>
 </p>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
+</div>
+</div>
