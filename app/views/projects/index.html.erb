@@ -31,7 +31,7 @@
         <div class="container">
           <h1 class="display-3">Thanks for stopping by.</h1>
           <p>Welcome to the sun-drenched tropical paradise of Isle Delfino! Pleasure to make your acquaintance. My name is Kelsey and I am studying Computer Science at UCCS and about to graduate (lol rip). My hobbies include just like generally hanging out and having a good time!</p>
-          <%= link_to 'New Project', new_project_path %>
+          <%= link_to 'New Project', new_project_path, class:"btn btn-success"%>
         </div>
       </div>
 
@@ -48,11 +48,11 @@
                 <p class="card-text"><td><%= project.description%></td> <p>
               <% end %>
 
-              <td><%= link_to 'Show', project %></td>
+              <td><%= link_to 'Show', project, class:"btn btn-primary" %></td>
 
               <% if user_signed_in? %>
-                <td><%= link_to 'Edit', edit_project_path(project) %></td>
-                <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= link_to 'Edit', edit_project_path(project), class:"btn btn-secondary" %></td>
+                <td><%= link_to 'Destroy', project, class:"btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
               <% end %>
             </div>
           </div>
